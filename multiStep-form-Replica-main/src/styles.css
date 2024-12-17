@@ -1,0 +1,34 @@
+/* You can add global styles to this file, and also import other style files */
+/* You can add global styles to this file, and also import other style files */
+:root{
+    --bg-color : #EFF5FF;
+   --border-color: #D6D9E6;
+   --denim: #022959;
+   --grey: #9699AA;
+   --light-blue: #ABBCFF;
+   --light-grey: #D6D9E6;
+   --orange: #FFAF7E;
+   --pink: #F9818E;
+   --purple: #483EFF;
+   --red-errors: #EE374A;
+   --sky-blue: #BEE2FD;
+   --very-light-grey: #F8F9FF;
+   --white: #FFFFFF;
+   }
+   
+   *{
+       margin: 0;
+       padding: 0;
+       box-sizing: border-box;
+       font-family: 'Ubuntu';
+   }
+   
+   body{
+       background-color: #EFF5FF;
+       display: flex;
+       justify-content: center;
+       align-items: center;
+       /* height: 100vh; */
+   }
+   
+   

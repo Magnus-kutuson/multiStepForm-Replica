@@ -1,0 +1,175 @@
+.option-container{
+    width: 100%;
+    height: 100%;
+    /* border: 2px solid #000; */
+    margin-bottom: 5rem;
+}
+
+.switch {  
+    position: relative;  
+    display: inline-block;  
+    width: 60px;  
+    height: 34px;  
+}  
+
+.switch input {  
+    opacity: 0;  
+    width: 0;  
+    height: 0;  
+}  
+
+.slider {  
+    position: absolute;  
+    cursor: pointer;  
+    top: 0;  
+    left: 0;  
+    right: 0;  
+    bottom: 0;  
+    background-color: #022959;  
+    transition: .4s;  
+    border-radius: 34px;  
+}  
+
+.slider:before {  
+    position: absolute;  
+    content: "";  
+    height: 26px;  
+    width: 26px;  
+    left: 4px;  
+    bottom: 4px;  
+    background-color: white;  
+    transition: .4s;  
+    border-radius: 50%;  
+}  
+
+input:checked + .slider {  
+    background-color: #022959;  
+}  
+
+input:checked + .slider:before {  
+    transform: translateX(26px);  
+}  
+
+.option-header{
+    width: 450px;
+    height: 68px;
+    margin-bottom: 4rem;
+}
+.option-header h1{
+    margin-bottom: 10px;
+    font-size: 32px;
+    font-weight: 700;
+}
+
+.option-header p{
+    font-size: 16px;
+    font-weight: 400;
+    color: #9699AA;
+    margin-bottom: 3rem;
+}
+.options{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.option{
+    width: 100%;
+    height: 160px;
+}
+
+.plan{
+    width: 138px;
+    height: 180px;
+    border-radius: 8px;
+    border: 1px solid #D6D9E6;
+    padding: 1rem;
+}
+.plan:hover{
+    border: 1px solid #483EFF;
+}
+
+.plan img{
+    width: 40px;
+    height: 40px;
+    margin-bottom: 2rem;
+}
+
+.plan h2{    
+    margin-bottom: 10px;
+    font-size: 18px;
+    font-weight: 500;
+    color: #022959;
+}
+
+.plan p{
+    font-size: 15px;
+    font-weight: 400;
+    color: #9699AA;
+    margin-bottom: 1rem;
+}
+
+
+
+.billing{
+    width: 100%;
+    height: 48px;
+    background-color: #f8f9ff;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 2rem 0;
+} 
+ 
+
+.billing label{
+    font-size: 15px;
+    font-weight: 700;
+    color: #9699AA;
+}
+
+.billing input{
+    width: 20px;
+    height: 20px;
+}
+.next{
+    width: 123px;
+    height: 48px;
+    background-color: #022959;
+    color: #fff;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-top: 1rem;
+}
+.buttons{
+    width: 100%;
+    height: 48px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* border: 1px solid red; */
+}
+.back{
+    background: none;
+    border: none;
+    font-size: 16px;
+    font-weight: 500;
+    color: #9699AA;
+    cursor: pointer;
+}
+.back:hover{
+    color: #022959;
+}
+.selected{
+    width: 138px;
+    height: 180px;
+    background-color: #F8F9FF;
+    border: 1px solid #483EFF;
+    border-radius: 8px;
+}
+
+.free-offer{
+    font-size: 12px;
+    font-weight: 400;
+    color: #483EFF;
+}

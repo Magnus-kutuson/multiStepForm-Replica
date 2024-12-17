@@ -1,0 +1,34 @@
+<form class="form-container" [formGroup]="userForm">
+    <div class="container-header">
+        <h1>Personal info</h1>
+        <p>Please provide your name, email address and phone number.</p>
+    </div>
+    <div class="forms">
+    <label for="name">
+        Name
+        <span *ngIf="userForm.controls['name'].invalid && userForm.controls['name'].touched" class="error">This field is required</span>
+    </label>
+    <input type="text" placeholder="e.g. Stephen King"  formControlName="name" [class.invalid-input]="userForm.controls['name'].invalid && (userForm.controls['name'].dirty || userForm.controls['name'].touched)"/>
+    </div>
+    <div class="forms">
+        <label for="email">
+            Email Address
+            <span *ngIf="userForm.controls['email'].invalid && userForm.controls['email'].touched" class="error">This field is required</span>
+        </label>
+        <input type="text" placeholder="e.g. stephenking@lorem.com" formControlName="email" [class.invalid-input]="userForm.controls['email'].invalid && (userForm.controls['email'].dirty || userForm.controls['email'].touched)"> 
+    </div>
+    <div class="forms">
+        <label for="phone">
+            Phone Number
+            <span *ngIf="userForm.controls['phone'].invalid && userForm.controls['phone'].touched" class="error">This field is required</span>
+        </label>
+        <input type="text" placeholder="e.g. +1 234 567 890" formControlName="phone" [class.invalid-input]="userForm.controls['phone'].invalid && (userForm.controls['phone'].dirty || userForm.controls['phone'].touched)">
+    </div>
+    <router-outlet></router-outlet>
+</form>
+<a routerLink="/step2"
+routerLinkActive="activebutton"
+ariaCurrentWhenActive="page">
+<button class="next" (ngSubmit)="onSubmit()" (click)="onSubmit()">Next Step</button>
+</a>
+  

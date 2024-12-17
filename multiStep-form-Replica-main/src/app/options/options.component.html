@@ -1,0 +1,41 @@
+<div class="option-container">
+    <div class="option-header">
+    <h1>Select your plan</h1>
+    <p>You have the option of monthly or yearly billing.</p>
+    </div>
+    <div class="options">
+        <div class="option" *ngFor="let option of options" [class.selected]="option.id === selectedPlanId" (click)="selectedPlan(option.id)">
+            <div class="plan    ">
+                <img [src]="option.icon" alt="option-icon">
+                <h2>{{option.plan}}</h2>
+                <p>{{isYearlyBilling ? option.year: option.month}}</p>
+                <p *ngIf="isYearlyBilling" class="free-offer">2 months free</p>
+            </div>
+        </div>
+    </div>
+    <div class="billing">
+            <label for="billing">Monthly Billing</label>
+            <div class="container">   
+                <label class="switch">  
+                    <input type="checkbox" id="theme-toggle" class="checkbox" (ngModelChange)="toggleBilling()" [(ngModel)]="isYearlyBilling">  
+                    <span class="slider"></span>  
+                </label>  
+            </div>  
+            <label for="billing">Yearly Billing</label>
+    </div>
+</div>
+<div>
+    <div class="buttons">
+        <a routerLink="/step1"
+        routerLinkActive="activebutton"
+        ariaCurrentWhenActive="page">
+        <button class="back">Go Back</button>
+    </a>
+    <a routerLink="/step3"
+        routerLinkActive="activebutton"
+        ariaCurrentWhenActive="page">
+        <button class="next">Next Step</button>
+    </a>
+    </div>
+    
+</div>

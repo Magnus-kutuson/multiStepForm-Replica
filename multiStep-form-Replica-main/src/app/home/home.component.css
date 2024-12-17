@@ -1,0 +1,32 @@
+.landing-page {
+    text-align: center;
+    padding: 2rem;
+  }
+  
+  h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+  }
+  
+  /* Call-to-Action Button */
+  .cta-btn {
+    background: #f4b400; /* Bright button color */
+    color: #fff;
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 50px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+  }
+  
+  .cta-btn:hover {
+    background: #ffa31a; /* Slightly darker hover effect */
+    transform: scale(1.05); /* Subtle zoom effect */
+  }

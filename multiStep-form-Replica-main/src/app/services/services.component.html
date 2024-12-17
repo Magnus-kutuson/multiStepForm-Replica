@@ -1,0 +1,28 @@
+<div class="service-container">
+    <div class="service-header">
+        <h1>Pick add-ons</h1>
+        <p>Add-ons help enhance your gaming experience</p>
+    </div>
+    <div class="services" *ngFor="let service of services" [class.selected]="service.id === selectedAddOnId" (click)="selectAddOn(service.id)">
+        <input type="checkbox" id="service" name="service" value="service" [checked]="service.id === selectedAddOnId"/>
+        <div class="service-text">
+            <h4>{{service.service}}</h4>
+            <p>{{service.description}}</p>
+        </div>
+        <span>{{service.price}}</span>
+    </div>
+</div>
+<div>
+    <div class="buttons">
+        <a routerLink="/step2"
+        routerLinkActive="activebutton"
+        ariaCurrentWhenActive="page">
+        <button class="back">Go Back</button>
+        </a>
+        <a routerLink="/step4"
+        routerLinkActive="activebutton"
+        ariaCurrentWhenActive="page">
+        <button class="next">Next Step</button>
+        </a>
+    </div>
+</div>
